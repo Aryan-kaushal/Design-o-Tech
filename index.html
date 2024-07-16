@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parrave - Vending Machine</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+        background-image: linear-gradient(#f8fcfb,#c9fdd7,#79d1c3,#6892d5);
+        background-repeat: no-repeat
+    }
+        .head{
+           
+            background-color: rgb(18, 18,62);
+            
+            height: 150px;
+        }
+        #heading{
+            font-size: 2.5rem;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+        }
+        .login{
+            font-size: 2rem;
+            height: 20px;
+        }
+      
+        ul{
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            margin-top: 20px;  
+           
+        }
+    
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .crack{
+            color: rgb(187, 161, 211);
+            margin-left: 100px;
+            font-size: 3rem;
+            font-family: cursive;
+        }
+        .free{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            border: 2px solid black;
+            padding: 20px;
+            font-family: cursive;
+            font-size: 1.5rem;
+        }
+        .image{
+            margin-top: 30px;
+            display: flex;
+           justify-content: space-around;
+        }
+        .snacking{
+            color: rgb(187, 161, 211);
+            margin-left: 100px;
+            font-size: 3rem;
+            font-family: cursive;
+        }
+        .gallery {
+        display: flex;
+            flex-wrap: wrap;
+        justify-content: center;
+}
+.paterner{
+    color: rgb(187, 161, 211);
+            margin-left: 100px;
+            font-size: 2.5rem;
+            font-family: cursive;
+}
+.news-snippet {
+  margin: 40px;
+  width: 250px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-snippet img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.news-snippet h2 {
+    margin-top: 40px;
+    display: flex;
+  font-size: 18px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.news-snippet:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0);
+   
+}
+#contact{
+    margin-top: 40px;
+}
+.contact {
+        display: flex;
+        font-size: 30px;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        color: rgb(170, 107, 228);
+    }
+    .form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+    }
+    .form input[type="text"] {
+        width: 800px;
+        height: 50px;
+        border-radius: 10px;
+        color: black;
+        font-size: 16px;
+        border: 1px solid white;
+        margin: 10px;
+        padding-left: 10px;
+    }
+    
+    .form #input-third {
+       height: 150px;
+    }
+    .portfolio {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        color: rgb(170, 107, 228);
+    }
+    .send {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 40px;
+    
+    }
+    
+    .send-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(170, 107, 228);
+        width: 140px;
+        height: 40px;
+        color: white;
+        font-size: 19px;
+        border: 2px solid rgb(170, 107, 228);
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    #images{
+        display: flex;
+        justify-content:space-around;
+        margin-top: 30px;
+     
+    }
+    
+    #message{
+        display: flex;
+        font-size: 30px;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        color: rgb(170, 107, 228);  
+    }
+    .para{
+        display: flex;
+        margin-top: 40px;
+        justify-content: center;
+    }
+    .call{
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+      font-size: 1.8rem;
+    }
+    .hours{
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+      font-size: 1.8rem;
+    }
+    .location{
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+      font-size: 1.8rem;
+    }
+    .touch{
+        color: rgb(187, 161, 211);
+            margin-left: 100px;
+            font-size: 3rem;
+            font-family: cursive;
+    }
+    .touch-image{
+      margin-top: 40px;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .push{
+        color: rgb(187, 161, 211);
+            margin-left: 100px;
+            font-size: 3rem;
+            font-family: cursive;
+            margin-top: 40px;
+    }
+    /* .push-image{
+        display: flex;
+        justify-content: space-around;
+    } */
+    .upi{
+        color: rgb(187, 161, 211);
+            margin-left: 100px;
+            font-size: 3rem;
+            font-family: cursive;
+            margin-top: 40px;
+    }
+    .upi-image{
+        margin-top: 40px;
+    }
+    .Advertisment{
+        color: rgb(187, 161, 211);
+            margin-left: 100px;
+            font-size: 3rem;
+            font-family: cursive;
+    }
+    .ads{
+        margin-left: 40%;
+        margin-top: 40px;
+    }
+    .btn{
+        margin-top: 40px;
+        font-size: 1.5rem;
+    }
+    .btn:hover{
+        background-color: rgb(18, 18,62);
+        border-radius: 10px;
+        color: white;
+    }
+    .comp{
+           color: rgb(187, 161, 211);
+            margin-left: 100px;
+            font-size: 3rem;
+            font-family: cursive;
+    }
+    </style>
+
+    <header>
+        <div class="head">
+                        
+            <div class="header">
+
+                <img src="Assets/logo.png" alt="" height="80px">
+                <a href="index.html">
+                    <p id="heading">Parrave</p>
+                </a>
+
+                <div class="login">
+                    <button>Login/Signup</button>
+                </div>
+            </div>
+    
+            <div>
+    
+                <nav>
+    
+                    <div class="navbar">
+                        <ul>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Services</a>
+                            </li>
+                            </li>
+                            <li>
+                                <a href="#">Advertisment</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    
+    
+                </nav>
+    
+            </div>
+    
+        </div>
+    </header>
+    
+    <br><br><br>
+    
+    <main>
+        
+        <section>
+            
+            <div >
+                <h2 class="crack">Crack The Deal</h2>
+                
+                <div class="free">
+                    <span>
+                        Free of Cost Deployment
+                    </span>
+                    <span>
+                        24/7 Service & Availability
+                    </span>
+                    <span>
+                        Paperless Transactions
+                    </span>
+                </div>
+    
+
+            </div>
+            <div class="image">
+                <img src="Assets/img (3).png" alt="" height="500vh">
+                <img src="Assets/img (4).jpg" alt="" height="500vh">
+                <img src="Assets/img (5).jpg" alt="" height="500vh">
+            </div>
+           
+    
+        </section>
+    
+    
+        <br><br><br>
+    
+        
+        <section>
+                
+            <div>
+                
+                <div>
+                    
+                    <div class="Advertisment">
+                        <span>Advertisment Opportunity</span>
+                    </div>
+                </div>
+    
+                <div class="ads">
+    
+                    <div>
+                        <div>
+                            <h6>Ads Dimensions</h6>
+                            <span>
+                                1. 24*36 inches
+                            </span>
+                            <span>
+                                2. 12*18 inches
+                            </span>
+                        </div>
+                           
+                        <div>
+                            <h4>24/7 Display</h4>
+                            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+                        </div>
+                        
+                        <div>
+                            <h4>Subscription Customised Ads</h4>
+                            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+                        </div>
+                        
+                        <div>
+                            <h4>Deals And Offers</h4>
+                            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="btn">Book Now</button>
+                    </div>
+    
+                </div>
+    
+            </div>
+                
+        </section>
+        
+        
+        <br><br><br>
+        
+        <div class="paterner">
+            <h1>Our Paterner's</h1>
+        </div>
+    
+        <section class="gallery">
+            <div class="news-snippet">
+                <img src="Assets/brand (1).webp" alt="">
+                <h2>Cadbory</h2>
+                
+            </div>
+            <div class="news-snippet">
+                <img src="Assets/brand (2).webp" alt="">
+                <h2>COCA COLA</h2>
+               
+            </div>
+           
+            <div class="news-snippet">
+                <img src="Assets/brand (3).webp" alt="">
+                <h2>HALDIRAM'S</h2>
+               
+            </div>
+            <div class="news-snippet">
+                <img src="Assets/brand (4).webp" alt="">
+                <h2>PARLE AGRO</h2>
+               
+            </div>
+          
+            
+        </section>
+        
+    
+        <br><br><br>
+    
+        
+        <section>
+            <div>
+    
+                <div>
+    
+                    <div class="snacking">
+                        <h2>Smart Snacking</h2>
+                    </div>
+                    <div id="images">
+                        <img src="Assets/img (1).jpg" alt="" height="300vh">
+                        <img src="Assets/img (2).jpg" alt="" height="300vh">
+                        <img src="Assets/img (4).png" alt="" height="300vh">
+                        <img src="Assets/img (5).png" alt="" height="300vh">
+                    </div>
+    
+                </div>
+    
+                <div>
+                    
+                    <div>
+                       
+                        <div class="touch">
+                            <h3>Touch Interface</h3>
+                        </div>
+                        <div class="touch-image">
+                       <img src="Assets/img (1).png" alt="" height="500vh" >
+                       <img src="Assets/team.png" alt="" height="500vh">
+                    </div>
+                    </div>
+    
+                    <div>
+                       
+                        <div class="push">
+                            <h3>Easy Push & Grab</h3>
+                        </div>
+              
+                        <img src="Assets/img (5).png" alt="" height="600vh" width="100%">
+                      </div>
+                    </div>
+
+                    <div>
+                       
+                        <div class="upi">
+                            <h3>UPI Payments</h3>
+                        </div>
+                        <div class="upi-image"><img src="Assets/img (3).jpg" alt="" height="600vh" width="100%"></div>
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+    
+       
+        <br><br><br>
+        
+    
+        <section>
+            <div>
+                
+            
+                <div>
+                    <div>
+                        <svg width="69" height="56" viewBox="0 0 69 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.43939 26.8064V26.8069C7.43939 28.1023 8.47095 29.1339 9.76631 29.1339H27.0513V52.6373H3.54785V26.8069C3.54785 14.7491 12.7638 4.80069 24.5036 3.63028V7.536C19.9667 8.0915 15.7593 10.2317 12.6344 13.5947C9.29795 17.1854 7.44223 21.9048 7.43939 26.8064ZM66.8325 29.1339V52.6373H43.329V26.8069C43.329 14.7489 52.5455 4.79947 64.3113 3.63006V7.5342C54.6836 8.69306 47.2205 16.8812 47.2205 26.8069C47.2205 28.1023 48.2521 29.1339 49.5475 29.1339H66.8325Z" stroke="#50FEA8" stroke-width="2"/>
+                        </svg>                                             
+                    </div>
+                    <p>We have been operating for over an providin top-notch services to our clients and build strong track record in the industry.We have been operating for over a decad providi ina top-notch  We have been operating</p>
+                    <div>
+                        <div>
+                            <img src="#" alt="img not found">
+                        </div>
+                        <div>
+                            <h6>John Deo</h6>
+                            <span class="comp">Company</span>
+                            <div class="company"><center><img src="Assets/team.png" alt="" height="550vh"></center></div>
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
+        </section>
+    
+        <br><br><br>
+    
+        <section>
+    
+            <div >
+    
+                <div class="message">
+                    <h6 id="message">MESSAGE US</h6>
+                    <h2 class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
+    
+                    <div>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="call">
+                                <p>Requesting A Call:</p>
+                                <a href="tel:9876543210">9876543210</a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div class="hours">
+                                <span>Open Hours:</span>
+                                <h4>9 am - 8 pm</h4>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="location">
+                                <p>Location:</p>
+                                <a href="#">Chitkara University, Rajpura</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div id="contact">
+                    <div class="contact">FEEDBACK</div>
+                    <div class="form">
+                        <form >
+                            <input type="text" placeholder="Your Email" id="input-first"><br>
+                            <input type="text" placeholder="Your Phone" id="input-second"><br>
+                            <input type="text" placeholder="Write Message Here.." id="input-third"><br>
+                        </form>
+                    </div>
+                    <div class="send"><span class="send-button">Send</span>
+                    </div>
+                </div>
+    
+    
+        </section>
+        
+    </main>
+    
+    <br><br><br>
+    
+    <footer style=" background-color: rgb(18, 18,62); margin: top 2px;;">
+        <section>
+            
+            <div>
+                <div>
+                    <font color="wheat">
+                    <p>©️ <a href="#">ACM</a> 2024 | All Rights Reserved</p>
+                </font>
+                </div>
+    
+                <div>
+                    <ul>
+                        <li><a href="#">Terms & Condition</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+        </section>
+    </footer>
+    
+
+</body>
+</html>
